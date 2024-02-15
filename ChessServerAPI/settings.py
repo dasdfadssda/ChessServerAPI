@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
-ALLOWED_HOSTS = ['localhost', 'django', '*']
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +30,7 @@ NAVER_CALLBACK_URL = 'http://localhost:3000/#/callback'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://chessextension.web.app/'] # 예를 들어 'example.com'
 
 
 # Application definition
@@ -59,16 +57,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ChessServerAPI.urls'
-CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
 
 TEMPLATES = [
     {
@@ -140,6 +128,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 CORS_ALLOW_CREDENTIALS = True 
+
+# CORS 설정
+CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOW_METHODS = ( 
     'DELETE',
