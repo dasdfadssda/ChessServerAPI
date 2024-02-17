@@ -30,9 +30,6 @@ NAVER_CALLBACK_URL = 'http://localhost:3000/#/callback'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://chessextension.web.app/'] # 예를 들어 'example.com'
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,6 +128,10 @@ CORS_ALLOW_CREDENTIALS = True
 
 # CORS 설정
 CORS_ALLOW_ALL_ORIGINS = True
+
+# 
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://chessextension.web.app/', '52.79.144.3']
+
 
 CORS_ALLOW_METHODS = ( 
     'DELETE',
