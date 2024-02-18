@@ -130,7 +130,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
 
 # 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://chessextension.web.app/', '52.79.144.3']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://chessextension.web.app/', '52.79.144.3', 'https://chessapi.shop/', 'http://chessapi.shop/']
 
 
 CORS_ALLOW_METHODS = ( 
