@@ -3,6 +3,10 @@
 import requests
 from django.http import JsonResponse
 from django.conf import settings
+from django.http import HttpResponse
+
+def default_endpoint(request):
+    return HttpResponse(status=200)
 
 def get_naver_token(request):
     code = request.GET.get('code')
@@ -57,3 +61,4 @@ def get_naver_userinfo(request):
     # 이후 user_info_dict를 이용해 사용자를 생성하거나 업데이트합니다.
 
     return JsonResponse(user_info_dict)  # safe 매개변수를 False로 설정하지 않아도 됨
+
